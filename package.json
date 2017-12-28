@@ -1,0 +1,12 @@
+{
+  "name": "visibiltiy-toggle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "George Higbie <gehigbie@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "react": "16.0.0"
+  }
+}
