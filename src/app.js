@@ -1,3 +1,9 @@
+let visibility = false;
+
+const onToggleVisibility = () => {
+    visibility = !visibility;
+    renderReactElements();
+};
 
 const renderReactElements = () => {
     const appRoot = document.getElementById('react-container');
@@ -5,12 +11,16 @@ const renderReactElements = () => {
         <div>
             <h1 className="center">Visibity Toggle</h1>
             <button id="toggleDetails"
-                    className="center"
-                    onClick="onToggleDetails">Hide Details</button>
+                    className="center btn btn-default"
+                    onClick={onToggleVisibility}>
+                    {visibility ? 'Hide Details' : 'Show Details'}
+            </button>
             <div id="secret"
+                 visibility={visibility}
                  className="center">
                 <h3>The secret you will see in his eyes below</h3>
-                <img src="https://c1.staticflickr.com/5/4058/4577136658_1b58bb02d9_z.jpg"/>
+                <img className="img-thumbnail"
+                     src="./assets/bulldog.jpg"/>
             </div>
         </div>
     );
