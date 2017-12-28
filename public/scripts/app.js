@@ -24,15 +24,15 @@ var renderReactElements = function renderReactElements() {
                 onClick: onToggleVisibility },
             visibility ? 'Hide Details' : 'Show Details'
         ),
+        React.createElement(
+            "h3",
+            { className: "center" },
+            "The secret you will see in his eyes below:"
+        ),
         visibility && React.createElement(
             "div",
             { id: "secret",
                 className: "center" },
-            React.createElement(
-                "h3",
-                null,
-                "The secret you will see in his eyes below"
-            ),
             React.createElement("img", { className: "img-thumbnail",
                 src: "./assets/bulldog.jpg" })
         )
