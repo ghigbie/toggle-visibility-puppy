@@ -1,5 +1,4 @@
-
-
+const appRoot = document.getElementById('react-container');
 
 const template = (
     <div>
@@ -12,3 +11,5 @@ const template = (
         </div>
     </div>
 );
+
+ReactDOM.render(template, appRoot);
