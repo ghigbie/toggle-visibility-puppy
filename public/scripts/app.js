@@ -24,10 +24,9 @@ var renderReactElements = function renderReactElements() {
                 onClick: onToggleVisibility },
             visibility ? 'Hide Details' : 'Show Details'
         ),
-        React.createElement(
+        visibility && React.createElement(
             "div",
             { id: "secret",
-                visibility: visibility,
                 className: "center" },
             React.createElement(
                 "h3",

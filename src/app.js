@@ -15,13 +15,14 @@ const renderReactElements = () => {
                     onClick={onToggleVisibility}>
                     {visibility ? 'Hide Details' : 'Show Details'}
             </button>
-            <div id="secret"
-                 visibility={visibility}
-                 className="center">
-                <h3>The secret you will see in his eyes below</h3>
-                <img className="img-thumbnail"
-                     src="./assets/bulldog.jpg"/>
-            </div>
+            
+            {visibility && (
+                <div id="secret"
+                     className="center">
+                    <h3>The secret you will see in his eyes below</h3>
+                    <img className="img-thumbnail"
+                         src="./assets/bulldog.jpg"/>
+                </div>)}
         </div>
     );
     ReactDOM.render(template, appRoot);
