@@ -10,7 +10,6 @@ class VisibilityToggle extends React.Component{
     }
     
     handleVisibility(){
-        console.log("handleVisibility called");
        this.setState((prevState) => {
            return {
                visibility: !prevState.visibility

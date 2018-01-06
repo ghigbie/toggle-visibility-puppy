@@ -28,7 +28,6 @@ var VisibilityToggle = function (_React$Component) {
     _createClass(VisibilityToggle, [{
         key: "handleVisibility",
         value: function handleVisibility() {
-            console.log("handleVisibility called");
             this.setState(function (prevState) {
                 return {
                     visibility: !prevState.visibility
