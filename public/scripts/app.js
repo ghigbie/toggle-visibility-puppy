@@ -28,6 +28,7 @@ var VisibilityToggle = function (_React$Component) {
     _createClass(VisibilityToggle, [{
         key: "handleVisibility",
         value: function handleVisibility() {
+            console.log("handleVisibility called");
             this.setState(function (prevState) {
                 return {
                     visibility: !prevState.visibility
@@ -49,7 +50,7 @@ var VisibilityToggle = function (_React$Component) {
                     "button",
                     { id: "toggleDetails",
                         className: "center btn btn-default",
-                        onClick: "this.handleVisibility" },
+                        onClick: this.handleVisibility },
                     this.state.visibility ? 'Hide Details' : 'Show Details'
                 ),
                 React.createElement(
@@ -57,7 +58,7 @@ var VisibilityToggle = function (_React$Component) {
                     { className: "center" },
                     "The secret, you will see in his eye's below:"
                 ),
-                this.visibility && React.createElement(
+                this.state.visibility && React.createElement(
                     "div",
                     { id: "secret",
                         className: "center" },
