@@ -1,5 +1,3 @@
-const appRoot = document.getElementById('react-container');
-
 class VisibilityToggle extends React.Component{
     constructor(props){
         super(props);
@@ -10,11 +8,11 @@ class VisibilityToggle extends React.Component{
     }
     
     handleVisibility(){
-       this.setState((prevState) => {
-           return {
-               visibility: !prevState.visibility
-           };
-       });
+      this.setState((prevState) => {
+          return {
+              visibility: !prevState.visibility
+          };
+      });
     }
     
     render(){
@@ -42,8 +40,5 @@ class VisibilityToggle extends React.Component{
     }
 }
 
-const renderApp = () => {
-    ReactDOM.render(<VisibilityToggle />, appRoot);
-};
-
-renderApp();
+const appRoot = document.getElementById('react-container');
+ReactDOM.render(<VisibilityToggle />, appRoot);
